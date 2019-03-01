@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC25E21D22297C0900E824BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E21C22297C0900E824BC /* AppDelegate.swift */; };
+		AC25E21F22297C0900E824BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E21E22297C0900E824BC /* ViewController.swift */; };
+		AC25E22222297C0900E824BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22022297C0900E824BC /* Main.storyboard */; };
+		AC25E22422297C0C00E824BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22322297C0C00E824BC /* Assets.xcassets */; };
+		AC25E22722297C0C00E824BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22522297C0C00E824BC /* LaunchScreen.storyboard */; };
+		AC25E23222297C0C00E824BC /* epitech_calendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E23122297C0C00E824BC /* epitech_calendarTests.swift */; };
+		AC25E23D22297C0C00E824BC /* epitech_calendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E23C22297C0C00E824BC /* epitech_calendarUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC25E22E22297C0C00E824BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC25E21122297C0900E824BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC25E21822297C0900E824BC;
+			remoteInfo = "epitech-calendar";
+		};
+		AC25E23922297C0C00E824BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC25E21122297C0900E824BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC25E21822297C0900E824BC;
+			remoteInfo = "epitech-calendar";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC25E21922297C0900E824BC /* epitech-calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "epitech-calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC25E21C22297C0900E824BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC25E21E22297C0900E824BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC25E22122297C0900E824BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC25E22322297C0C00E824BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC25E22622297C0C00E824BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC25E22822297C0C00E824BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC25E22D22297C0C00E824BC /* epitech-calendarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "epitech-calendarTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC25E23122297C0C00E824BC /* epitech_calendarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = epitech_calendarTests.swift; sourceTree = "<group>"; };
+		AC25E23322297C0C00E824BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC25E23822297C0C00E824BC /* epitech-calendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "epitech-calendarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC25E23C22297C0C00E824BC /* epitech_calendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = epitech_calendarUITests.swift; sourceTree = "<group>"; };
+		AC25E23E22297C0C00E824BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC25E21622297C0900E824BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC25E22A22297C0C00E824BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC25E23522297C0C00E824BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC25E21022297C0900E824BC = {
+			isa = PBXGroup;
+			children = (
+				AC25E21B22297C0900E824BC /* epitech-calendar */,
+				AC25E23022297C0C00E824BC /* epitech-calendarTests */,
+				AC25E23B22297C0C00E824BC /* epitech-calendarUITests */,
+				AC25E21A22297C0900E824BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC25E21A22297C0900E824BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC25E21922297C0900E824BC /* epitech-calendar.app */,
+				AC25E22D22297C0C00E824BC /* epitech-calendarTests.xctest */,
+				AC25E23822297C0C00E824BC /* epitech-calendarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC25E21B22297C0900E824BC /* epitech-calendar */ = {
+			isa = PBXGroup;
+			children = (
+				AC25E21C22297C0900E824BC /* AppDelegate.swift */,
+				AC25E21E22297C0900E824BC /* ViewController.swift */,
+				AC25E22022297C0900E824BC /* Main.storyboard */,
+				AC25E22322297C0C00E824BC /* Assets.xcassets */,
+				AC25E22522297C0C00E824BC /* LaunchScreen.storyboard */,
+				AC25E22822297C0C00E824BC /* Info.plist */,
+			);
+			path = "epitech-calendar";
+			sourceTree = "<group>";
+		};
+		AC25E23022297C0C00E824BC /* epitech-calendarTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC25E23122297C0C00E824BC /* epitech_calendarTests.swift */,
+				AC25E23322297C0C00E824BC /* Info.plist */,
+			);
+			path = "epitech-calendarTests";
+			sourceTree = "<group>";
+		};
+		AC25E23B22297C0C00E824BC /* epitech-calendarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC25E23C22297C0C00E824BC /* epitech_calendarUITests.swift */,
+				AC25E23E22297C0C00E824BC /* Info.plist */,
+			);
+			path = "epitech-calendarUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC25E21822297C0900E824BC /* epitech-calendar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC25E24122297C0C00E824BC /* Build configuration list for PBXNativeTarget "epitech-calendar" */;
+			buildPhases = (
+				AC25E21522297C0900E824BC /* Sources */,
+				AC25E21622297C0900E824BC /* Frameworks */,
+				AC25E21722297C0900E824BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "epitech-calendar";
+			productName = "epitech-calendar";
+			productReference = AC25E21922297C0900E824BC /* epitech-calendar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC25E22C22297C0C00E824BC /* epitech-calendarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC25E24422297C0C00E824BC /* Build configuration list for PBXNativeTarget "epitech-calendarTests" */;
+			buildPhases = (
+				AC25E22922297C0C00E824BC /* Sources */,
+				AC25E22A22297C0C00E824BC /* Frameworks */,
+				AC25E22B22297C0C00E824BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC25E22F22297C0C00E824BC /* PBXTargetDependency */,
+			);
+			name = "epitech-calendarTests";
+			productName = "epitech-calendarTests";
+			productReference = AC25E22D22297C0C00E824BC /* epitech-calendarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC25E23722297C0C00E824BC /* epitech-calendarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC25E24722297C0C00E824BC /* Build configuration list for PBXNativeTarget "epitech-calendarUITests" */;
+			buildPhases = (
+				AC25E23422297C0C00E824BC /* Sources */,
+				AC25E23522297C0C00E824BC /* Frameworks */,
+				AC25E23622297C0C00E824BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC25E23A22297C0C00E824BC /* PBXTargetDependency */,
+			);
+			name = "epitech-calendarUITests";
+			productName = "epitech-calendarUITests";
+			productReference = AC25E23822297C0C00E824BC /* epitech-calendarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC25E21122297C0900E824BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Lucas Marandat";
+				TargetAttributes = {
+					AC25E21822297C0900E824BC = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					AC25E22C22297C0C00E824BC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AC25E21822297C0900E824BC;
+					};
+					AC25E23722297C0C00E824BC = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = AC25E21822297C0900E824BC;
+					};
+				};
+			};
+			buildConfigurationList = AC25E21422297C0900E824BC /* Build configuration list for PBXProject "epitech-calendar" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC25E21022297C0900E824BC;
+			productRefGroup = AC25E21A22297C0900E824BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC25E21822297C0900E824BC /* epitech-calendar */,
+				AC25E22C22297C0C00E824BC /* epitech-calendarTests */,
+				AC25E23722297C0C00E824BC /* epitech-calendarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC25E21722297C0900E824BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC25E22722297C0C00E824BC /* LaunchScreen.storyboard in Resources */,
+				AC25E22422297C0C00E824BC /* Assets.xcassets in Resources */,
+				AC25E22222297C0900E824BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC25E22B22297C0C00E824BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC25E23622297C0C00E824BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC25E21522297C0900E824BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC25E21F22297C0900E824BC /* ViewController.swift in Sources */,
+				AC25E21D22297C0900E824BC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC25E22922297C0C00E824BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC25E23222297C0C00E824BC /* epitech_calendarTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC25E23422297C0C00E824BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC25E23D22297C0C00E824BC /* epitech_calendarUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC25E22F22297C0C00E824BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC25E21822297C0900E824BC /* epitech-calendar */;
+			targetProxy = AC25E22E22297C0C00E824BC /* PBXContainerItemProxy */;
+		};
+		AC25E23A22297C0C00E824BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC25E21822297C0900E824BC /* epitech-calendar */;
+			targetProxy = AC25E23922297C0C00E824BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC25E22022297C0900E824BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC25E22122297C0900E824BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC25E22522297C0C00E824BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC25E22622297C0C00E824BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC25E23F22297C0C00E824BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC25E24022297C0C00E824BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC25E24222297C0C00E824BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "epitech-calendar/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC25E24322297C0C00E824BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "epitech-calendar/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendar";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC25E24522297C0C00E824BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "epitech-calendarTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/epitech-calendar.app/epitech-calendar";
+			};
+			name = Debug;
+		};
+		AC25E24622297C0C00E824BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "epitech-calendarTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendarTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/epitech-calendar.app/epitech-calendar";
+			};
+			name = Release;
+		};
+		AC25E24822297C0C00E824BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "epitech-calendarUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "epitech-calendar";
+			};
+			name = Debug;
+		};
+		AC25E24922297C0C00E824BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "epitech-calendarUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendarUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "epitech-calendar";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC25E21422297C0900E824BC /* Build configuration list for PBXProject "epitech-calendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC25E23F22297C0C00E824BC /* Debug */,
+				AC25E24022297C0C00E824BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC25E24122297C0C00E824BC /* Build configuration list for PBXNativeTarget "epitech-calendar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC25E24222297C0C00E824BC /* Debug */,
+				AC25E24322297C0C00E824BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC25E24422297C0C00E824BC /* Build configuration list for PBXNativeTarget "epitech-calendarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC25E24522297C0C00E824BC /* Debug */,
+				AC25E24622297C0C00E824BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC25E24722297C0C00E824BC /* Build configuration list for PBXNativeTarget "epitech-calendarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC25E24822297C0C00E824BC /* Debug */,
+				AC25E24922297C0C00E824BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC25E21122297C0900E824BC /* Project object */;
+}
