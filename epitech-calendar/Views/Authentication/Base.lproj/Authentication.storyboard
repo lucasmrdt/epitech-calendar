@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HYC-yP-q4w">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Web Controler-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WebControler" customModule="epitech_calendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hKf-9X-BL1">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hKf-9X-BL1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="KrD-ip-aSc"/>
+                            <constraint firstItem="hKf-9X-BL1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="QZB-Cx-TM7"/>
+                            <constraint firstItem="hKf-9X-BL1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ook-QV-LdM"/>
+                            <constraint firstItem="hKf-9X-BL1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="oxh-IZ-BsZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="hKf-9X-BL1" id="0Ak-Ju-yz5"/>
+                        <segue destination="MSV-N2-fD8" kind="unwind" identifier="AuthenticationSuccess" unwindAction="authenticationSuccess:" id="7Ii-Z6-AwD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="MSV-N2-fD8" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="-322"/>
+        </scene>
+        <!--App-->
+        <scene sceneID="kU7-9S-R54">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="App" id="6Pn-AQ-hCY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Boo-WD-THv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="89" y="286"/>
+        </scene>
+        <!--Authentication Controler-->
+        <scene sceneID="fea-XV-ktq">
+            <objects>
+                <viewController storyboardIdentifier="Authentication" id="HYC-yP-q4w" customClass="AuthenticationControler" customModule="epitech_calendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dKg-XM-ExJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9rx-vB-ynb">
+                                <rect key="frame" x="141.5" y="328.5" width="92" height="30"/>
+                                <state key="normal" title="Se connecter"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="AuthenticateUser" id="5Ax-bN-Kzw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20113807916641235" green="0.19694188237190247" blue="0.31766009330749512" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9rx-vB-ynb" firstAttribute="centerY" secondItem="8eF-Fn-gNM" secondAttribute="centerY" id="079-pX-9ZA"/>
+                            <constraint firstItem="9rx-vB-ynb" firstAttribute="centerX" secondItem="8eF-Fn-gNM" secondAttribute="centerX" id="B78-1E-Hd3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8eF-Fn-gNM"/>
+                    </view>
+                    <connections>
+                        <segue destination="6Pn-AQ-hCY" kind="presentation" identifier="RedirectAuthenticationSuccess" modalTransitionStyle="crossDissolve" id="k91-Hu-kI0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yf9-5H-nI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-815.20000000000005" y="120.98950524737631"/>
+        </scene>
+    </scenes>
+</document>

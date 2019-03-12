@@ -7,13 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9845D3670FEA1AC1387F22AC /* Pods_epitech_calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0CDA41D055F0B610D05426 /* Pods_epitech_calendar.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		AC0D42B5223003BC008B30AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D42B4223003BC008B30AF /* Extensions.swift */; };
 		AC25E21D22297C0900E824BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E21C22297C0900E824BC /* AppDelegate.swift */; };
-		AC25E21F22297C0900E824BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E21E22297C0900E824BC /* ViewController.swift */; };
-		AC25E22222297C0900E824BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22022297C0900E824BC /* Main.storyboard */; };
+		AC25E22222297C0900E824BC /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22022297C0900E824BC /* Authentication.storyboard */; };
 		AC25E22422297C0C00E824BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22322297C0C00E824BC /* Assets.xcassets */; };
 		AC25E22722297C0C00E824BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22522297C0C00E824BC /* LaunchScreen.storyboard */; };
 		AC25E23222297C0C00E824BC /* epitech_calendarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E23122297C0C00E824BC /* epitech_calendarTests.swift */; };
 		AC25E23D22297C0C00E824BC /* epitech_calendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E23C22297C0C00E824BC /* epitech_calendarUITests.swift */; };
+		AC25E24C2229908D00E824BC /* NetworkControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E24B2229908D00E824BC /* NetworkControler.swift */; };
+		AC25E24F2229914500E824BC /* WebControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E24E2229914500E824BC /* WebControler.swift */; };
+		AC40E52C223134EC00CCFE97 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E52B223134EC00CCFE97 /* User+CoreDataProperties.swift */; };
+		AC40E530223135FA00CCFE97 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E52F223135FA00CCFE97 /* User+CoreDataClass.swift */; };
+		AC40E5342231408300CCFE97 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E5332231408300CCFE97 /* Colors.swift */; };
+		AC40E537223146C900CCFE97 /* AuthenticationControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E536223146C900CCFE97 /* AuthenticationControler.swift */; };
+		AC40E53A2231474E00CCFE97 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E5392231474E00CCFE97 /* Storage.swift */; };
+		AC40E53C22314BBA00CCFE97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E53B22314BBA00CCFE97 /* Constants.swift */; };
+		AC40E53F223171E500CCFE97 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E53E223171E500CCFE97 /* SegueHandler.swift */; };
+		AC470E0A2231300F00D9B42D /* epitech-calendar.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC470E082231300F00D9B42D /* epitech-calendar.xcdatamodeld */; };
+		AC4FA924223572960026A44C /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4FA922223572950026A44C /* App.storyboard */; };
+		ACB984852236536E009D6C40 /* FilterControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984842236536E009D6C40 /* FilterControler.swift */; };
+		ACB9849222365905009D6C40 /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACB9848F223658B2009D6C40 /* SourceSansPro-Light.ttf */; };
+		ACB9849322365908009D6C40 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACB98490223658B3009D6C40 /* SourceSansPro-Regular.ttf */; };
+		ACB9849922368FF6009D6C40 /* NavigationBarLeftButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9849822368FF6009D6C40 /* NavigationBarLeftButton.swift */; };
+		ACB9849E22369551009D6C40 /* FilterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB9849D22369551009D6C40 /* FilterModel.swift */; };
+		ACB984A32236E386009D6C40 /* HomeControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A22236E386009D6C40 /* HomeControler.swift */; };
+		ACB984A52236E410009D6C40 /* FilterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A42236E410009D6C40 /* FilterCellView.swift */; };
+		ACB984A72237ABF5009D6C40 /* FilterSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A62237ABF5009D6C40 /* FilterSectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,10 +54,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F0CDA41D055F0B610D05426 /* Pods_epitech_calendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_epitech_calendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86A67F1E46C7E1245AA618A6 /* Pods-epitech-calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-epitech-calendar.debug.xcconfig"; path = "Target Support Files/Pods-epitech-calendar/Pods-epitech-calendar.debug.xcconfig"; sourceTree = "<group>"; };
+		8824E710EE667E9E7E4F15A2 /* Pods-epitech-calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-epitech-calendar.release.xcconfig"; path = "Target Support Files/Pods-epitech-calendar/Pods-epitech-calendar.release.xcconfig"; sourceTree = "<group>"; };
+		AC0D42B4223003BC008B30AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AC25E21922297C0900E824BC /* epitech-calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "epitech-calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC25E21C22297C0900E824BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC25E21E22297C0900E824BC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AC25E22122297C0900E824BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC25E22122297C0900E824BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
 		AC25E22322297C0C00E824BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC25E22622297C0C00E824BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC25E22822297C0C00E824BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +70,35 @@
 		AC25E23822297C0C00E824BC /* epitech-calendarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "epitech-calendarUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC25E23C22297C0C00E824BC /* epitech_calendarUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = epitech_calendarUITests.swift; sourceTree = "<group>"; };
 		AC25E23E22297C0C00E824BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC25E24B2229908D00E824BC /* NetworkControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkControler.swift; sourceTree = "<group>"; };
+		AC25E24E2229914500E824BC /* WebControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebControler.swift; sourceTree = "<group>"; };
+		AC40E52B223134EC00CCFE97 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AC40E52F223135FA00CCFE97 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AC40E5332231408300CCFE97 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		AC40E536223146C900CCFE97 /* AuthenticationControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationControler.swift; sourceTree = "<group>"; };
+		AC40E5392231474E00CCFE97 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		AC40E53B22314BBA00CCFE97 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AC40E53E223171E500CCFE97 /* SegueHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		AC470E092231300F00D9B42D /* Store.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store.xcdatamodel; sourceTree = "<group>"; };
+		AC4FA923223572950026A44C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/App.storyboard; sourceTree = "<group>"; };
+		ACB984842236536E009D6C40 /* FilterControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterControler.swift; sourceTree = "<group>"; };
+		ACB98486223658B2009D6C40 /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
+		ACB98487223658B2009D6C40 /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		ACB98488223658B2009D6C40 /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		ACB98489223658B2009D6C40 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
+		ACB9848A223658B2009D6C40 /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
+		ACB9848B223658B2009D6C40 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
+		ACB9848C223658B2009D6C40 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
+		ACB9848D223658B2009D6C40 /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
+		ACB9848E223658B2009D6C40 /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
+		ACB9848F223658B2009D6C40 /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
+		ACB98490223658B3009D6C40 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
+		ACB98491223658B3009D6C40 /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
+		ACB9849822368FF6009D6C40 /* NavigationBarLeftButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarLeftButton.swift; sourceTree = "<group>"; };
+		ACB9849D22369551009D6C40 /* FilterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterModel.swift; sourceTree = "<group>"; };
+		ACB984A22236E386009D6C40 /* HomeControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeControler.swift; path = "epitech-calendar/Controlers/Home/HomeControler.swift"; sourceTree = SOURCE_ROOT; };
+		ACB984A42236E410009D6C40 /* FilterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellView.swift; sourceTree = "<group>"; };
+		ACB984A62237ABF5009D6C40 /* FilterSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9845D3670FEA1AC1387F22AC /* Pods_epitech_calendar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +127,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6021CC1E14D903780E542EF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F0CDA41D055F0B610D05426 /* Pods_epitech_calendar.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AC0D42B32230038F008B30AF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AC0D42B4223003BC008B30AF /* Extensions.swift */,
+				AC40E5332231408300CCFE97 /* Colors.swift */,
+				AC40E53B22314BBA00CCFE97 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		AC25E21022297C0900E824BC = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +152,8 @@
 				AC25E23022297C0C00E824BC /* epitech-calendarTests */,
 				AC25E23B22297C0C00E824BC /* epitech-calendarUITests */,
 				AC25E21A22297C0900E824BC /* Products */,
+				DF9BC94AEE62CB369604D96E /* Pods */,
+				6021CC1E14D903780E542EF2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +170,19 @@
 		AC25E21B22297C0900E824BC /* epitech-calendar */ = {
 			isa = PBXGroup;
 			children = (
+				ACB98472223593BA009D6C40 /* Fonts */,
+				AC40E5382231473F00CCFE97 /* Services */,
+				AC40E5352231463B00CCFE97 /* Classes */,
+				AC40E53222313D3700CCFE97 /* Views */,
+				AC40E5312231364600CCFE97 /* Models */,
+				AC0D42B32230038F008B30AF /* Helpers */,
+				AC25E24D222990E700E824BC /* Controlers */,
+				AC25E24A2229901B00E824BC /* Other Controlers */,
 				AC25E21C22297C0900E824BC /* AppDelegate.swift */,
-				AC25E21E22297C0900E824BC /* ViewController.swift */,
-				AC25E22022297C0900E824BC /* Main.storyboard */,
 				AC25E22322297C0C00E824BC /* Assets.xcassets */,
 				AC25E22522297C0C00E824BC /* LaunchScreen.storyboard */,
 				AC25E22822297C0C00E824BC /* Info.plist */,
+				AC470E082231300F00D9B42D /* epitech-calendar.xcdatamodeld */,
 			);
 			path = "epitech-calendar";
 			sourceTree = "<group>";
@@ -125,6 +205,124 @@
 			path = "epitech-calendarUITests";
 			sourceTree = "<group>";
 		};
+		AC25E24A2229901B00E824BC /* Other Controlers */ = {
+			isa = PBXGroup;
+			children = (
+				AC25E24B2229908D00E824BC /* NetworkControler.swift */,
+			);
+			path = "Other Controlers";
+			sourceTree = "<group>";
+		};
+		AC25E24D222990E700E824BC /* Controlers */ = {
+			isa = PBXGroup;
+			children = (
+				ACB9846F22357AF4009D6C40 /* App */,
+				AC40E53D22316EFF00CCFE97 /* Authentication */,
+			);
+			path = Controlers;
+			sourceTree = "<group>";
+		};
+		AC40E5312231364600CCFE97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AC40E52F223135FA00CCFE97 /* User+CoreDataClass.swift */,
+				AC40E52B223134EC00CCFE97 /* User+CoreDataProperties.swift */,
+				ACB9849D22369551009D6C40 /* FilterModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AC40E53222313D3700CCFE97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ACB9849B2236902D009D6C40 /* App */,
+				ACB9849C22369039009D6C40 /* Authentication */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AC40E5352231463B00CCFE97 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				AC40E53E223171E500CCFE97 /* SegueHandler.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		AC40E5382231473F00CCFE97 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				AC40E5392231474E00CCFE97 /* Storage.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		AC40E53D22316EFF00CCFE97 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AC25E24E2229914500E824BC /* WebControler.swift */,
+				AC40E536223146C900CCFE97 /* AuthenticationControler.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		ACB9846F22357AF4009D6C40 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ACB984A22236E386009D6C40 /* HomeControler.swift */,
+				ACB984842236536E009D6C40 /* FilterControler.swift */,
+			);
+			name = App;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		ACB98472223593BA009D6C40 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ACB98489223658B2009D6C40 /* SourceSansPro-Black.ttf */,
+				ACB9848C223658B2009D6C40 /* SourceSansPro-BlackItalic.ttf */,
+				ACB9848B223658B2009D6C40 /* SourceSansPro-Bold.ttf */,
+				ACB9848D223658B2009D6C40 /* SourceSansPro-BoldItalic.ttf */,
+				ACB98486223658B2009D6C40 /* SourceSansPro-ExtraLight.ttf */,
+				ACB98488223658B2009D6C40 /* SourceSansPro-ExtraLightItalic.ttf */,
+				ACB9848E223658B2009D6C40 /* SourceSansPro-Italic.ttf */,
+				ACB9848F223658B2009D6C40 /* SourceSansPro-Light.ttf */,
+				ACB9848A223658B2009D6C40 /* SourceSansPro-LightItalic.ttf */,
+				ACB98490223658B3009D6C40 /* SourceSansPro-Regular.ttf */,
+				ACB98491223658B3009D6C40 /* SourceSansPro-SemiBold.ttf */,
+				ACB98487223658B2009D6C40 /* SourceSansPro-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		ACB9849B2236902D009D6C40 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AC4FA922223572950026A44C /* App.storyboard */,
+				ACB9849822368FF6009D6C40 /* NavigationBarLeftButton.swift */,
+				ACB984A42236E410009D6C40 /* FilterCellView.swift */,
+				ACB984A62237ABF5009D6C40 /* FilterSectionHeaderView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ACB9849C22369039009D6C40 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AC25E22022297C0900E824BC /* Authentication.storyboard */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		DF9BC94AEE62CB369604D96E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86A67F1E46C7E1245AA618A6 /* Pods-epitech-calendar.debug.xcconfig */,
+				8824E710EE667E9E7E4F15A2 /* Pods-epitech-calendar.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +330,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC25E24122297C0C00E824BC /* Build configuration list for PBXNativeTarget "epitech-calendar" */;
 			buildPhases = (
+				B93C9B9553A9936A592682EB /* [CP] Check Pods Manifest.lock */,
 				AC25E21522297C0900E824BC /* Sources */,
 				AC25E21622297C0900E824BC /* Frameworks */,
 				AC25E21722297C0900E824BC /* Resources */,
+				45896DCBB4B9901C01477C2B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,7 +431,10 @@
 			files = (
 				AC25E22722297C0C00E824BC /* LaunchScreen.storyboard in Resources */,
 				AC25E22422297C0C00E824BC /* Assets.xcassets in Resources */,
-				AC25E22222297C0900E824BC /* Main.storyboard in Resources */,
+				AC25E22222297C0900E824BC /* Authentication.storyboard in Resources */,
+				ACB9849222365905009D6C40 /* SourceSansPro-Light.ttf in Resources */,
+				AC4FA924223572960026A44C /* App.storyboard in Resources */,
+				ACB9849322365908009D6C40 /* SourceSansPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,13 +454,76 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45896DCBB4B9901C01477C2B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-epitech-calendar/Pods-epitech-calendar-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-epitech-calendar/Pods-epitech-calendar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B93C9B9553A9936A592682EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-epitech-calendar-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC25E21522297C0900E824BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC25E21F22297C0900E824BC /* ViewController.swift in Sources */,
+				AC0D42B5223003BC008B30AF /* Extensions.swift in Sources */,
+				AC40E53A2231474E00CCFE97 /* Storage.swift in Sources */,
+				ACB984A52236E410009D6C40 /* FilterCellView.swift in Sources */,
+				ACB984852236536E009D6C40 /* FilterControler.swift in Sources */,
+				ACB9849922368FF6009D6C40 /* NavigationBarLeftButton.swift in Sources */,
+				AC40E5342231408300CCFE97 /* Colors.swift in Sources */,
+				AC40E53F223171E500CCFE97 /* SegueHandler.swift in Sources */,
+				ACB984A72237ABF5009D6C40 /* FilterSectionHeaderView.swift in Sources */,
+				AC40E530223135FA00CCFE97 /* User+CoreDataClass.swift in Sources */,
 				AC25E21D22297C0900E824BC /* AppDelegate.swift in Sources */,
+				AC40E52C223134EC00CCFE97 /* User+CoreDataProperties.swift in Sources */,
+				AC470E0A2231300F00D9B42D /* epitech-calendar.xcdatamodeld in Sources */,
+				AC25E24F2229914500E824BC /* WebControler.swift in Sources */,
+				ACB984A32236E386009D6C40 /* HomeControler.swift in Sources */,
+				AC25E24C2229908D00E824BC /* NetworkControler.swift in Sources */,
+				ACB9849E22369551009D6C40 /* FilterModel.swift in Sources */,
+				AC40E537223146C900CCFE97 /* AuthenticationControler.swift in Sources */,
+				AC40E53C22314BBA00CCFE97 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +559,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		AC25E22022297C0900E824BC /* Main.storyboard */ = {
+		AC25E22022297C0900E824BC /* Authentication.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				AC25E22122297C0900E824BC /* Base */,
 			);
-			name = Main.storyboard;
+			name = Authentication.storyboard;
 			sourceTree = "<group>";
 		};
 		AC25E22522297C0C00E824BC /* LaunchScreen.storyboard */ = {
@@ -307,6 +573,14 @@
 				AC25E22622297C0C00E824BC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		AC4FA922223572950026A44C /* App.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4FA923223572950026A44C /* Base */,
+			);
+			name = App.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -430,6 +704,7 @@
 		};
 		AC25E24222297C0C00E824BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86A67F1E46C7E1245AA618A6 /* Pods-epitech-calendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -438,6 +713,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -447,6 +723,7 @@
 		};
 		AC25E24322297C0C00E824BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8824E710EE667E9E7E4F15A2 /* Pods-epitech-calendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +732,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -580,6 +858,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		AC470E082231300F00D9B42D /* epitech-calendar.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				AC470E092231300F00D9B42D /* Store.xcdatamodel */,
+			);
+			currentVersion = AC470E092231300F00D9B42D /* Store.xcdatamodel */;
+			path = "epitech-calendar.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = AC25E21122297C0900E824BC /* Project object */;
 }
