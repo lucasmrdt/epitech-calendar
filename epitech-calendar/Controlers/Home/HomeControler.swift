@@ -18,6 +18,11 @@ class HomeControler : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+        let start = dateFormatterGet.date(from: "2019-03-11")!
+        let end = dateFormatterGet.date(from: "2019-03-17")!
+        EpitechAPI.Api.getActivities(start: start, end: end, completion: { let ok = $0 })
     }
     
     private func setupNavigationBar() {
