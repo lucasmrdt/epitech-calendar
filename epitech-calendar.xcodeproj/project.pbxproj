@@ -17,8 +17,6 @@
 		AC25E23D22297C0C00E824BC /* epitech_calendarUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E23C22297C0C00E824BC /* epitech_calendarUITests.swift */; };
 		AC25E24C2229908D00E824BC /* NetworkControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E24B2229908D00E824BC /* NetworkControler.swift */; };
 		AC25E24F2229914500E824BC /* WebControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E24E2229914500E824BC /* WebControler.swift */; };
-		AC40E52C223134EC00CCFE97 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E52B223134EC00CCFE97 /* User+CoreDataProperties.swift */; };
-		AC40E530223135FA00CCFE97 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E52F223135FA00CCFE97 /* User+CoreDataClass.swift */; };
 		AC40E5342231408300CCFE97 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E5332231408300CCFE97 /* Colors.swift */; };
 		AC40E537223146C900CCFE97 /* AuthenticationControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E536223146C900CCFE97 /* AuthenticationControler.swift */; };
 		AC40E53A2231474E00CCFE97 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC40E5392231474E00CCFE97 /* Storage.swift */; };
@@ -34,6 +32,10 @@
 		ACB984A32236E386009D6C40 /* HomeControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A22236E386009D6C40 /* HomeControler.swift */; };
 		ACB984A52236E410009D6C40 /* FilterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A42236E410009D6C40 /* FilterCellView.swift */; };
 		ACB984A72237ABF5009D6C40 /* FilterSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A62237ABF5009D6C40 /* FilterSectionHeaderView.swift */; };
+		ACB984A92237C031009D6C40 /* Epitech-API.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A82237C031009D6C40 /* Epitech-API.swift */; };
+		ACB984AC2237C60E009D6C40 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984AA2237C60E009D6C40 /* User+CoreDataProperties.swift */; };
+		ACB984AD2237C60E009D6C40 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984AB2237C60E009D6C40 /* User+CoreDataClass.swift */; };
+		ACB984AF2237E70D009D6C40 /* LoaderControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984AE2237E70D009D6C40 /* LoaderControler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,8 +74,6 @@
 		AC25E23E22297C0C00E824BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC25E24B2229908D00E824BC /* NetworkControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkControler.swift; sourceTree = "<group>"; };
 		AC25E24E2229914500E824BC /* WebControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebControler.swift; sourceTree = "<group>"; };
-		AC40E52B223134EC00CCFE97 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AC40E52F223135FA00CCFE97 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AC40E5332231408300CCFE97 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		AC40E536223146C900CCFE97 /* AuthenticationControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationControler.swift; sourceTree = "<group>"; };
 		AC40E5392231474E00CCFE97 /* Storage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
@@ -99,6 +99,10 @@
 		ACB984A22236E386009D6C40 /* HomeControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeControler.swift; path = "epitech-calendar/Controlers/Home/HomeControler.swift"; sourceTree = SOURCE_ROOT; };
 		ACB984A42236E410009D6C40 /* FilterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellView.swift; sourceTree = "<group>"; };
 		ACB984A62237ABF5009D6C40 /* FilterSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSectionHeaderView.swift; sourceTree = "<group>"; };
+		ACB984A82237C031009D6C40 /* Epitech-API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Epitech-API.swift"; sourceTree = "<group>"; };
+		ACB984AA2237C60E009D6C40 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "../User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		ACB984AB2237C60E009D6C40 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "../User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		ACB984AE2237E70D009D6C40 /* LoaderControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,8 +229,8 @@
 		AC40E5312231364600CCFE97 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC40E52F223135FA00CCFE97 /* User+CoreDataClass.swift */,
-				AC40E52B223134EC00CCFE97 /* User+CoreDataProperties.swift */,
+				ACB984AB2237C60E009D6C40 /* User+CoreDataClass.swift */,
+				ACB984AA2237C60E009D6C40 /* User+CoreDataProperties.swift */,
 				ACB9849D22369551009D6C40 /* FilterModel.swift */,
 			);
 			path = Models;
@@ -253,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				AC40E5392231474E00CCFE97 /* Storage.swift */,
+				ACB984A82237C031009D6C40 /* Epitech-API.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -262,6 +267,7 @@
 			children = (
 				AC25E24E2229914500E824BC /* WebControler.swift */,
 				AC40E536223146C900CCFE97 /* AuthenticationControler.swift */,
+				ACB984AE2237E70D009D6C40 /* LoaderControler.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -465,12 +471,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-epitech-calendar/Pods-epitech-calendar-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/NVActivityIndicatorView/NVActivityIndicatorView.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NVActivityIndicatorView.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -514,16 +522,18 @@
 				AC40E5342231408300CCFE97 /* Colors.swift in Sources */,
 				AC40E53F223171E500CCFE97 /* SegueHandler.swift in Sources */,
 				ACB984A72237ABF5009D6C40 /* FilterSectionHeaderView.swift in Sources */,
-				AC40E530223135FA00CCFE97 /* User+CoreDataClass.swift in Sources */,
 				AC25E21D22297C0900E824BC /* AppDelegate.swift in Sources */,
-				AC40E52C223134EC00CCFE97 /* User+CoreDataProperties.swift in Sources */,
 				AC470E0A2231300F00D9B42D /* epitech-calendar.xcdatamodeld in Sources */,
 				AC25E24F2229914500E824BC /* WebControler.swift in Sources */,
 				ACB984A32236E386009D6C40 /* HomeControler.swift in Sources */,
 				AC25E24C2229908D00E824BC /* NetworkControler.swift in Sources */,
 				ACB9849E22369551009D6C40 /* FilterModel.swift in Sources */,
+				ACB984A92237C031009D6C40 /* Epitech-API.swift in Sources */,
 				AC40E537223146C900CCFE97 /* AuthenticationControler.swift in Sources */,
+				ACB984AC2237C60E009D6C40 /* User+CoreDataProperties.swift in Sources */,
 				AC40E53C22314BBA00CCFE97 /* Constants.swift in Sources */,
+				ACB984AD2237C60E009D6C40 /* User+CoreDataClass.swift in Sources */,
+				ACB984AF2237E70D009D6C40 /* LoaderControler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

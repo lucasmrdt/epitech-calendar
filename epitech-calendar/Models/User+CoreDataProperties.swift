@@ -18,5 +18,7 @@ extension User {
     }
 
     @NSManaged public var authToken: String?
+    
+    // test
 
 }

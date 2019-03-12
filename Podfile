@@ -6,5 +6,6 @@ target 'epitech-calendar' do
   use_frameworks!
 
   pod 'KeychainSwift', '~> 13.0'
+  pod 'NVActivityIndicatorView'
 
 end

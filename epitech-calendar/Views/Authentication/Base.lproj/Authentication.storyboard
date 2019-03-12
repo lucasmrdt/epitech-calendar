@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Light.ttf">
+            <string>SourceSansPro-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Web Controler-->
         <scene sceneID="tne-QT-ifu">
@@ -38,13 +43,13 @@
                     </view>
                     <connections>
                         <outlet property="webView" destination="hKf-9X-BL1" id="0Ak-Ju-yz5"/>
-                        <segue destination="MSV-N2-fD8" kind="unwind" identifier="AuthenticationSuccess" unwindAction="authenticationSuccess:" id="7Ii-Z6-AwD"/>
+                        <segue destination="MSV-N2-fD8" kind="unwind" identifier="AuthTokenGotten" unwindAction="authTokenGotten:" id="7Ii-Z6-AwD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <exit id="MSV-N2-fD8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="89" y="-322"/>
+            <point key="canvasLocation" x="-167" y="-186"/>
         </scene>
         <!--App-->
         <scene sceneID="kU7-9S-R54">
@@ -52,7 +57,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="Home" storyboardName="App" id="6Pn-AQ-hCY" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Boo-WD-THv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="286"/>
+            <point key="canvasLocation" x="510" y="511"/>
         </scene>
         <!--Authentication Controler-->
         <scene sceneID="fea-XV-ktq">
@@ -66,7 +71,7 @@
                                 <rect key="frame" x="141.5" y="328.5" width="92" height="30"/>
                                 <state key="normal" title="Se connecter"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="AuthenticateUser" id="5Ax-bN-Kzw"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" identifier="" id="5Ax-bN-Kzw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,12 +84,54 @@
                         <viewLayoutGuide key="safeArea" id="8eF-Fn-gNM"/>
                     </view>
                     <connections>
-                        <segue destination="6Pn-AQ-hCY" kind="presentation" identifier="RedirectAuthenticationSuccess" modalTransitionStyle="crossDissolve" id="k91-Hu-kI0"/>
+                        <segue destination="h2F-Tn-6ok" kind="presentation" identifier="AuthLogin" modalTransitionStyle="crossDissolve" id="L1x-Cu-yoM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yf9-5H-nI5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-815.20000000000005" y="120.98950524737631"/>
+            <point key="canvasLocation" x="-1174" y="83"/>
+        </scene>
+        <!--Loader Controler-->
+        <scene sceneID="gru-SA-3Di">
+            <objects>
+                <viewController id="h2F-Tn-6ok" customClass="LoaderControler" customModule="epitech_calendar" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wmp-oy-Ns4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEn-kz-xEP" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="137" y="283" width="50" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="cubeTransition"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Loading user data ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKU-5a-dKz">
+                                <rect key="frame" x="90.5" y="424" width="194" height="31"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Light" family="Source Sans Pro" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.20113807919999999" green="0.19694188239999999" blue="0.3176600933" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="kKU-5a-dKz" firstAttribute="centerX" secondItem="3zo-ct-OJe" secondAttribute="centerX" id="O9M-jf-jHn"/>
+                            <constraint firstItem="UEn-kz-xEP" firstAttribute="centerX" secondItem="3zo-ct-OJe" secondAttribute="centerX" id="Sqg-yX-UUv"/>
+                            <constraint firstItem="UEn-kz-xEP" firstAttribute="centerY" secondItem="3zo-ct-OJe" secondAttribute="centerY" id="YpL-UM-QzC"/>
+                            <constraint firstItem="kKU-5a-dKz" firstAttribute="top" secondItem="UEn-kz-xEP" secondAttribute="bottom" constant="30" id="feX-Kb-tI5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3zo-ct-OJe"/>
+                    </view>
+                    <connections>
+                        <outlet property="loader" destination="UEn-kz-xEP" id="1Qi-Id-7oB"/>
+                        <segue destination="6Pn-AQ-hCY" kind="presentation" identifier="AuthLoginSucceed" modalTransitionStyle="crossDissolve" id="jal-Y1-hW4"/>
+                        <segue destination="Vt9-Uz-Ag7" kind="unwind" identifier="AuthLoginFailed" unwindAction="authLoginFailed:" id="Dab-Rz-K8V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="re5-4t-7gZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Vt9-Uz-Ag7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-167" y="512"/>
         </scene>
     </scenes>
 </document>

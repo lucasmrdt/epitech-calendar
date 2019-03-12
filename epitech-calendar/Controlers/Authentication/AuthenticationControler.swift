@@ -12,31 +12,27 @@ class AuthenticationControler : UIViewController, SegueHandler {
     
     var authToken: String?
     
-    @IBAction func authenticationSuccess(_ sender: UIStoryboardSegue) {
-        saveUserAuthToken()
+    @IBAction func authTokenGotten(_ sender: UIStoryboardSegue) {
+        EpitechAPI.Api.authToken = authToken!
+        redirectToLoginScreen()
+    }
+    @IBAction func authLoginFailed(_ sender: UIStoryboardSegue) {
+        EpitechAPI.Api.authToken = nil
     }
     
     override func viewDidLoad() {
         getUserAuthToken()
     }
     
-    private func redirectUserToApp() {
+    private func redirectToLoginScreen() {
         DispatchQueue.main.async {
-            self.performSegueWithIdentifier(segueIdentifier: .RedirectAuthenticationSuccess, sender: nil)
+            self.performSegueWithIdentifier(segueIdentifier: .AuthLogin, sender: nil)
         }
     }
     
-    private func saveUserAuthToken() {
-        guard let context = Storage.context else { return }
-        let user = User(context: context)
-        user.authToken = authToken
-        Storage.save()
-        redirectUserToApp()
-    }
-    
     private func getUserAuthToken() {
-        if let _: User = Storage.loadItem(entityName: .User) {
-            redirectUserToApp()
+        if EpitechAPI.Api.hasToken {
+            redirectToLoginScreen()
         }
     }
 }

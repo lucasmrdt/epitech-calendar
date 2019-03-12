@@ -1,16 +1,22 @@
 PODS:
   - KeychainSwift (13.0.0)
+  - NVActivityIndicatorView (4.6.1):
+    - NVActivityIndicatorView/Presenter (= 4.6.1)
+  - NVActivityIndicatorView/Presenter (4.6.1)
 
 DEPENDENCIES:
   - KeychainSwift (~> 13.0)
+  - NVActivityIndicatorView
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - KeychainSwift
+    - NVActivityIndicatorView
 
 SPEC CHECKSUMS:
   KeychainSwift: 23d6c16cbc33f20fafa30c3d783241b4b87d998c
+  NVActivityIndicatorView: 4ca19fccc84595a78957336a086d00a49be6ce61
 
-PODFILE CHECKSUM: f65e56115dd26e6f514f6eb976ada83738802c02
+PODFILE CHECKSUM: f0cd17d14cf371e7f2b3cb2eba8edbb8cc82c7b9
 
 COCOAPODS: 1.6.1

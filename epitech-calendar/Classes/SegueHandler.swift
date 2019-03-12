@@ -10,9 +10,11 @@ import Foundation
 import UIKit
 
 enum SegueIdentifier : String {
-    case AuthenticateUser
-    case AuthenticationSuccess
-    case RedirectAuthenticationSuccess
+    // MARK - Auth
+    case AuthTokenGotten
+    case AuthLogin
+    case AuthLoginSucceed
+    case AuthLoginFailed
 }
 
 protocol SegueHandler {}
