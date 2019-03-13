@@ -22,7 +22,7 @@ class HomeControler : UIViewController {
         dateFormatterGet.dateFormat = "yyyy-MM-dd"
         let start = dateFormatterGet.date(from: "2019-03-11")!
         let end = dateFormatterGet.date(from: "2019-03-17")!
-        EpitechAPI.Api.getActivities(start: start, end: end, completion: { let ok = $0 })
+        EpitechAPI.Api.fetchActivities(start: start, end: end, completion: { dump($0!.filter({ $0.eventRegistration == .Registred })) })
     }
     
     private func setupNavigationBar() {

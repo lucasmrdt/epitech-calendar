@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:epitech-calendar/User+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:epitech-calendar/User+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:epitech-calendar.xcodeproj">
    </FileRef>
    <FileRef

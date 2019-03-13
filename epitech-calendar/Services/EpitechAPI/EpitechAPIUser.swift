@@ -10,54 +10,24 @@ import Foundation
 
 // MARK - JSON Parser
 extension InternalEpitechAPI {
-    private func getCourse(rawCourse: String) -> String {
-        let pieces: [Substring] = rawCourse.split(separator: "/")
-        return String(pieces.first ?? "")
-    }
-    
-    private func getGPA(rawGPA: [[String: String]], course: String) -> Float {
-        guard   let gpaObject = rawGPA.first(where: { $0["cycle"] == course }),
-            let gpa = gpaObject["gpa"]
-            else { return 0.0 }
-        return Float(gpa) ?? 0.0
-    }
-    
-    private func getPicture(rawPicture: String) -> String {
-        return domainName + rawPicture
-    }
-    
-    private func createUserFromJSON(json: [String: Any]) -> User? {
-        guard let context = Storage.context else { return nil }
+    private func getUserFromData(data: Data) -> User? {
+        let decoder = JSONDecoder()
         
-        let user = User(context: context)
-        
-        guard   let firstname   = json["firstname"]     as! String?,
-                let lastname    = json["lastname"]      as! String?,
-                let login       = json["login"]         as! String?,
-                let semester    = json["semester"]      as! Int16?,
-                let rawCourse   = json["course_code"]   as! String?,
-                let rawPicture  = json["picture"]       as! String?,
-                let rawGPA      = json["gpa"]           as! [[String: String]]?
-        else { return nil }
-        
-        let course = getCourse(rawCourse: rawCourse)
-        user.firstname = firstname
-        user.lastname = lastname
-        user.login = login
-        user.semester = semester
-        user.course = course
-        user.picture = getPicture(rawPicture: rawPicture)
-        user.gpa = getGPA(rawGPA: rawGPA, course: course)
-        user.authToken = authToken
-        return user
+        do {
+            return try decoder.decode(User.self, from: data)
+        } catch let error {
+            print("Fail to parse JSON: \(error)")
+            return nil
+        }
     }
 }
 
 // MARK - Public methods
 extension InternalEpitechAPI {
     func fetchUserInformation(completion: @escaping (_ user: User?) -> ()) {
-        func fetchSuccess(data: ([String: Any])) {
-            user = createUserFromJSON(json: data)
+        func fetchSuccess(data: Data) {
+            let user = getUserFromData(data: data)
+            self.user = user
             completion(user)
         }
         

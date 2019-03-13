@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9845D3670FEA1AC1387F22AC /* Pods_epitech_calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0CDA41D055F0B610D05426 /* Pods_epitech_calendar.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		AC0D42B5223003BC008B30AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D42B4223003BC008B30AF /* Extensions.swift */; };
+		AC1B40C8223862DD00C925F8 /* JSONParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B40C7223862DD00C925F8 /* JSONParsing.swift */; };
 		AC25E21D22297C0900E824BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E21C22297C0900E824BC /* AppDelegate.swift */; };
 		AC25E22222297C0900E824BC /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22022297C0900E824BC /* Authentication.storyboard */; };
 		AC25E22422297C0C00E824BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22322297C0C00E824BC /* Assets.xcassets */; };
@@ -33,12 +34,11 @@
 		ACB984A52236E410009D6C40 /* FilterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A42236E410009D6C40 /* FilterCellView.swift */; };
 		ACB984A72237ABF5009D6C40 /* FilterSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A62237ABF5009D6C40 /* FilterSectionHeaderView.swift */; };
 		ACB984A92237C031009D6C40 /* EpitechAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984A82237C031009D6C40 /* EpitechAPI.swift */; };
-		ACB984AC2237C60E009D6C40 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984AA2237C60E009D6C40 /* User+CoreDataProperties.swift */; };
 		ACB984AD2237C60E009D6C40 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984AB2237C60E009D6C40 /* User+CoreDataClass.swift */; };
 		ACB984AF2237E70D009D6C40 /* LoaderControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984AE2237E70D009D6C40 /* LoaderControler.swift */; };
 		ACB984B2223808C6009D6C40 /* EpitechAPIUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984B1223808C6009D6C40 /* EpitechAPIUser.swift */; };
 		ACB984B4223809F8009D6C40 /* EpitechAPIActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984B3223809F8009D6C40 /* EpitechAPIActivity.swift */; };
-		ACB984B622380AAE009D6C40 /* EpitechActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984B522380AAE009D6C40 /* EpitechActivityModel.swift */; };
+		ACB984B622380AAE009D6C40 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984B522380AAE009D6C40 /* ActivityModel.swift */; };
 		ACB984BA22380FB0009D6C40 /* EpitechModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984B922380FB0009D6C40 /* EpitechModuleModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +64,7 @@
 		86A67F1E46C7E1245AA618A6 /* Pods-epitech-calendar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-epitech-calendar.debug.xcconfig"; path = "Target Support Files/Pods-epitech-calendar/Pods-epitech-calendar.debug.xcconfig"; sourceTree = "<group>"; };
 		8824E710EE667E9E7E4F15A2 /* Pods-epitech-calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-epitech-calendar.release.xcconfig"; path = "Target Support Files/Pods-epitech-calendar/Pods-epitech-calendar.release.xcconfig"; sourceTree = "<group>"; };
 		AC0D42B4223003BC008B30AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AC1B40C7223862DD00C925F8 /* JSONParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParsing.swift; sourceTree = "<group>"; };
 		AC25E21922297C0900E824BC /* epitech-calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "epitech-calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC25E21C22297C0900E824BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC25E22122297C0900E824BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
@@ -104,12 +105,11 @@
 		ACB984A42236E410009D6C40 /* FilterCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCellView.swift; sourceTree = "<group>"; };
 		ACB984A62237ABF5009D6C40 /* FilterSectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterSectionHeaderView.swift; sourceTree = "<group>"; };
 		ACB984A82237C031009D6C40 /* EpitechAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpitechAPI.swift; sourceTree = "<group>"; };
-		ACB984AA2237C60E009D6C40 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "../User+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		ACB984AB2237C60E009D6C40 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataClass.swift"; path = "../User+CoreDataClass.swift"; sourceTree = "<group>"; };
 		ACB984AE2237E70D009D6C40 /* LoaderControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderControler.swift; sourceTree = "<group>"; };
 		ACB984B1223808C6009D6C40 /* EpitechAPIUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpitechAPIUser.swift; sourceTree = "<group>"; };
 		ACB984B3223809F8009D6C40 /* EpitechAPIActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpitechAPIActivity.swift; sourceTree = "<group>"; };
-		ACB984B522380AAE009D6C40 /* EpitechActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpitechActivityModel.swift; sourceTree = "<group>"; };
+		ACB984B522380AAE009D6C40 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		ACB984B922380FB0009D6C40 /* EpitechModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpitechModuleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +153,7 @@
 				AC0D42B4223003BC008B30AF /* Extensions.swift */,
 				AC40E5332231408300CCFE97 /* Colors.swift */,
 				AC40E53B22314BBA00CCFE97 /* Constants.swift */,
+				AC1B40C7223862DD00C925F8 /* JSONParsing.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -238,9 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				ACB984AB2237C60E009D6C40 /* User+CoreDataClass.swift */,
-				ACB984AA2237C60E009D6C40 /* User+CoreDataProperties.swift */,
 				ACB9849D22369551009D6C40 /* FilterModel.swift */,
-				ACB984B522380AAE009D6C40 /* EpitechActivityModel.swift */,
+				ACB984B522380AAE009D6C40 /* ActivityModel.swift */,
 				ACB984B922380FB0009D6C40 /* EpitechModuleModel.swift */,
 			);
 			path = Models;
@@ -553,11 +553,11 @@
 				ACB9849E22369551009D6C40 /* FilterModel.swift in Sources */,
 				ACB984A92237C031009D6C40 /* EpitechAPI.swift in Sources */,
 				AC40E537223146C900CCFE97 /* AuthenticationControler.swift in Sources */,
-				ACB984AC2237C60E009D6C40 /* User+CoreDataProperties.swift in Sources */,
 				AC40E53C22314BBA00CCFE97 /* Constants.swift in Sources */,
+				AC1B40C8223862DD00C925F8 /* JSONParsing.swift in Sources */,
 				ACB984AD2237C60E009D6C40 /* User+CoreDataClass.swift in Sources */,
 				ACB984AF2237E70D009D6C40 /* LoaderControler.swift in Sources */,
-				ACB984B622380AAE009D6C40 /* EpitechActivityModel.swift in Sources */,
+				ACB984B622380AAE009D6C40 /* ActivityModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,7 +44,7 @@ class InternalEpitechAPI {
 
 // MARK - Requests Helpers
 extension InternalEpitechAPI {
-    func fetch<T>(url rawUrl: String, onSucceed: @escaping ((T) -> ()), onFail: @escaping (_ error: Any) -> ()) {
+    func fetch(url rawUrl: String, onSucceed: @escaping ((Data) -> ()), onFail: @escaping (_ error: Any) -> ()) {
         guard let url = URL(string: rawUrl) else {
             onFail("Invalid url: \(rawUrl)")
             return
@@ -53,19 +53,13 @@ extension InternalEpitechAPI {
         var request = URLRequest(url: url)
         request.setValue(cookie, forHTTPHeaderField: "Cookie")
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            guard let dataResponse = data, error == nil else {
+            if data != nil && error == nil {
+                onSucceed(data!)
+            } else {
                 onFail(error as Any)
-                return
-            }
-            
-            do {
-                let json = try JSONSerialization.jsonObject(with: dataResponse, options: []) as! T
-                onSucceed(json)
-            } catch let error {
-                onFail(error)
             }
         }
-        
+
         task.resume()
     }
 }

@@ -22,6 +22,7 @@ class LoaderControler: UIViewController, SegueHandler {
     }
     
     private func authLoginSucceed() {
+        print(EpitechAPI.Api.user!)
         DispatchQueue.main.async {
             self.performSegueWithIdentifier(segueIdentifier: .AuthLoginSucceed, sender: nil)
         }
