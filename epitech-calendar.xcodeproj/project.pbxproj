@@ -10,6 +10,7 @@
 		9845D3670FEA1AC1387F22AC /* Pods_epitech_calendar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0CDA41D055F0B610D05426 /* Pods_epitech_calendar.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		AC0D42B5223003BC008B30AF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D42B4223003BC008B30AF /* Extensions.swift */; };
 		AC1B40C8223862DD00C925F8 /* JSONParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B40C7223862DD00C925F8 /* JSONParsing.swift */; };
+		AC1B40CC22390E3B00C925F8 /* DateScrollerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B40CB22390E3B00C925F8 /* DateScrollerCellView.swift */; };
 		AC25E21D22297C0900E824BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC25E21C22297C0900E824BC /* AppDelegate.swift */; };
 		AC25E22222297C0900E824BC /* Authentication.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22022297C0900E824BC /* Authentication.storyboard */; };
 		AC25E22422297C0C00E824BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC25E22322297C0C00E824BC /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 		ACB984B4223809F8009D6C40 /* EpitechAPIActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984B3223809F8009D6C40 /* EpitechAPIActivity.swift */; };
 		ACB984B622380AAE009D6C40 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984B522380AAE009D6C40 /* ActivityModel.swift */; };
 		ACB984BA22380FB0009D6C40 /* EpitechModuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984B922380FB0009D6C40 /* EpitechModuleModel.swift */; };
+		ACEE3116223A5C7F001978D1 /* DateScrollerControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE3115223A5C7F001978D1 /* DateScrollerControler.swift */; };
+		ACEE311A223A6281001978D1 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEE3119223A6281001978D1 /* Protocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,7 @@
 		8824E710EE667E9E7E4F15A2 /* Pods-epitech-calendar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-epitech-calendar.release.xcconfig"; path = "Target Support Files/Pods-epitech-calendar/Pods-epitech-calendar.release.xcconfig"; sourceTree = "<group>"; };
 		AC0D42B4223003BC008B30AF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		AC1B40C7223862DD00C925F8 /* JSONParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParsing.swift; sourceTree = "<group>"; };
+		AC1B40CB22390E3B00C925F8 /* DateScrollerCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateScrollerCellView.swift; sourceTree = "<group>"; };
 		AC25E21922297C0900E824BC /* epitech-calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "epitech-calendar.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC25E21C22297C0900E824BC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC25E22122297C0900E824BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Authentication.storyboard; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 		ACB984B3223809F8009D6C40 /* EpitechAPIActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpitechAPIActivity.swift; sourceTree = "<group>"; };
 		ACB984B522380AAE009D6C40 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		ACB984B922380FB0009D6C40 /* EpitechModuleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpitechModuleModel.swift; sourceTree = "<group>"; };
+		ACEE3115223A5C7F001978D1 /* DateScrollerControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateScrollerControler.swift; sourceTree = "<group>"; };
+		ACEE3119223A6281001978D1 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 				AC40E5332231408300CCFE97 /* Colors.swift */,
 				AC40E53B22314BBA00CCFE97 /* Constants.swift */,
 				AC1B40C7223862DD00C925F8 /* JSONParsing.swift */,
+				ACEE3119223A6281001978D1 /* Protocols.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -287,6 +294,7 @@
 			children = (
 				ACB984A22236E386009D6C40 /* HomeControler.swift */,
 				ACB984842236536E009D6C40 /* FilterControler.swift */,
+				ACEE3115223A5C7F001978D1 /* DateScrollerControler.swift */,
 			);
 			name = App;
 			path = "New Group";
@@ -318,6 +326,7 @@
 				ACB9849822368FF6009D6C40 /* NavigationBarLeftButton.swift */,
 				ACB984A42236E410009D6C40 /* FilterCellView.swift */,
 				ACB984A62237ABF5009D6C40 /* FilterSectionHeaderView.swift */,
+				AC1B40CB22390E3B00C925F8 /* DateScrollerCellView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -546,15 +555,18 @@
 				ACB984A72237ABF5009D6C40 /* FilterSectionHeaderView.swift in Sources */,
 				AC25E21D22297C0900E824BC /* AppDelegate.swift in Sources */,
 				AC470E0A2231300F00D9B42D /* epitech-calendar.xcdatamodeld in Sources */,
+				ACEE311A223A6281001978D1 /* Protocols.swift in Sources */,
 				ACB984B4223809F8009D6C40 /* EpitechAPIActivity.swift in Sources */,
 				AC25E24F2229914500E824BC /* WebControler.swift in Sources */,
 				ACB984A32236E386009D6C40 /* HomeControler.swift in Sources */,
 				AC25E24C2229908D00E824BC /* NetworkControler.swift in Sources */,
 				ACB9849E22369551009D6C40 /* FilterModel.swift in Sources */,
+				AC1B40CC22390E3B00C925F8 /* DateScrollerCellView.swift in Sources */,
 				ACB984A92237C031009D6C40 /* EpitechAPI.swift in Sources */,
 				AC40E537223146C900CCFE97 /* AuthenticationControler.swift in Sources */,
 				AC40E53C22314BBA00CCFE97 /* Constants.swift in Sources */,
 				AC1B40C8223862DD00C925F8 /* JSONParsing.swift in Sources */,
+				ACEE3116223A5C7F001978D1 /* DateScrollerControler.swift in Sources */,
 				ACB984AD2237C60E009D6C40 /* User+CoreDataClass.swift in Sources */,
 				ACB984AF2237E70D009D6C40 /* LoaderControler.swift in Sources */,
 				ACB984B622380AAE009D6C40 /* ActivityModel.swift in Sources */,
@@ -741,15 +753,18 @@
 			baseConfigurationReference = 86A67F1E46C7E1245AA618A6 /* Pods-epitech-calendar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K4WY843LCK;
 				INFOPLIST_FILE = "epitech-calendar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendar";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucacasmarandat.epitech-calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -760,15 +775,18 @@
 			baseConfigurationReference = 8824E710EE667E9E7E4F15A2 /* Pods-epitech-calendar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K4WY843LCK;
 				INFOPLIST_FILE = "epitech-calendar/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "lucasmrdt.epitech-calendar";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.lucacasmarandat.epitech-calendar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

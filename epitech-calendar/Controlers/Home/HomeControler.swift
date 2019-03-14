@@ -9,15 +9,16 @@
 import UIKit
 
 class HomeControler : UIViewController {
+    // MARK - Constants
+    let dateScrollerControler = DateScrollerControler()
 
-    @IBOutlet weak var leftNavBarButton: UIButton!
-    
+    // MARK - Variables
+    @IBOutlet weak var dateCollectionView: UICollectionView?
+
     @IBAction func filterCancel(_ sender: UIStoryboardSegue) {
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupNavigationBar()
+    
+    private func fetchActivities() {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd"
         let start = dateFormatterGet.date(from: "2019-03-11")!
@@ -31,4 +32,50 @@ class HomeControler : UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: leftButton)
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupNavigationBar()
+        dateScrollerControler.collectionView = dateCollectionView
+    }
+}
+
+// MARK - UICollectionView DataSource
+extension HomeControler : UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        switch collectionView {
+        case dateCollectionView:
+            return dateScrollerControler.numberOfSections(in: collectionView)
+        default:
+            fatalError("Unknown collectionView \(collectionView)")
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        switch collectionView {
+        case dateCollectionView:
+            return dateScrollerControler.collectionView(collectionView, numberOfItemsInSection: section)
+        default:
+            fatalError("Unknown collectionView \(collectionView)")
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        switch collectionView {
+        case dateCollectionView:
+            return dateScrollerControler.collectionView(collectionView, cellForItemAt: indexPath)
+        default:
+            fatalError("Unknown collectionView \(collectionView)")
+        }
+    }
+}
+
+// MARK - UICollectionViewDelegate
+extension HomeControler : UICollectionViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if dateCollectionView?.isScrolling ?? false {
+            dateScrollerControler.scrollViewDidScroll(scrollView)
+        } else {
+            fatalError("Unknown scrollView \(scrollView)")
+        }
+    }
 }
