@@ -48,13 +48,14 @@ struct Activity : Decodable {
     let codeInstance: String
     let activityLabel: String
     let semester: Int
-    
     let start: Date
     let end: Date
-    
     let totalRegistredStudents: Int
     let maxRoomSeats: Int
     let location: String
+    
+    // MARK - Internal Attributes
+    var row: Int?
     
     
     // MARK - Static Functions
@@ -74,8 +75,11 @@ struct Activity : Decodable {
             return "J-P"
         case "St-Louis":
             return "S-L"
+        case "Visioconference":
+            return ""
         default:
-            return "Unknown"
+            print("Invalid value: campus, got \(campus)")
+            return ""
         }
     }
     
@@ -110,5 +114,15 @@ struct Activity : Decodable {
         let locationValues = try locationBlock.nestedContainer(keyedBy: CodingRoomKeys.self, forKey: .location)
         maxRoomSeats = try locationValues.decode(Int.self, forKey: .maxRoomSeats)
         location = try Activity.getLocation(values: locationValues) ?? "Unknown"
+    }
+}
+
+// MARK - Public Helpers
+extension Activity {
+    static func intersects(activity1: Activity, activity2: Activity) -> Bool {
+        if activity1.end <= activity2.start || activity1.start >= activity2.end {
+            return false
+        }
+        return true
     }
 }

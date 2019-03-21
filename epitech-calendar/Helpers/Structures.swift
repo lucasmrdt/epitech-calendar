@@ -9,7 +9,7 @@
 import Foundation
 
 // @from http://kean.github.io/post/codable-tips-and-tricks
-struct Safe<Base: Decodable>: Decodable {
+struct Safe<Base: Decodable> : Decodable {
     let value: Base?
     
     public init(from decoder: Decoder) throws {

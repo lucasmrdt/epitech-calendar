@@ -40,15 +40,20 @@ extension UIViewController {
     }
 }
 
-extension UICollectionView {
-    var isScrolling: Bool {
-        get {
-            return self.isDragging || self.isDecelerating
-        }
-    }
-}
-
 extension Date {
+    // @from https://stackoverflow.com/a/44847450
+    var startOfWeek: Date? {
+        let gregorian = Calendar(identifier: .gregorian)
+        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
+        return gregorian.date(byAdding: .day, value: 1, to: sunday)
+    }
+    
+    var endOfWeek: Date? {
+        let gregorian = Calendar(identifier: .gregorian)
+        guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
+        return gregorian.date(byAdding: .day, value: 7, to: sunday)
+    }
+
     static func getDate(day: Int, month: Int, year: Int) -> Date {
         let dateComponents = DateComponents(year: year, month: month, day: day)
         let calendar = Calendar.current
@@ -64,5 +69,11 @@ extension Date {
         let range = calendar.range(of: .day, in: .month, for: date)!
         let dateRange = range.map { self.getDate(day: $0, month: month, year: year) }
         return dateRange
+    }
+    
+    static func monthsBetweenDates(startDate: Date, endDate: Date) -> Int {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.month], from: startDate, to: endDate)
+        return components.month!
     }
 }

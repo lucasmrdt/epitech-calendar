@@ -1,13 +1,13 @@
 //
-//  DateScrollerCellView.swift
+//  ActivityScrollerCellView.swift
 //  epitech-calendar
 //
-//  Created by Lucas Marandat on 13/03/2019.
+//  Created by Lucas Marandat on 15/03/2019.
 //  Copyright © 2019 Lucas Marandat. All rights reserved.
 //
 
 import UIKit
 
-class DateScrollerCellView : UICollectionViewCell {
+class ActivityScrollerCellView : UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
 }

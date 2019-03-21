@@ -17,10 +17,6 @@ class FilterControler : UICollectionViewController {
     let itemPadding: CGFloat = 20
     let itemHeight: CGFloat = 40
     
-    // MARK - Variables
-    var filters = FilterModel()
-
-    
     // MARK - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,16 +28,16 @@ class FilterControler : UICollectionViewController {
 extension FilterControler {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return filters.sections.count
+        return FilterModel.sections.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filters.sections[section].items.count
+        return FilterModel.sections[section].items.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseCellIdentifier, for: indexPath) as! FilterCellView
-        let section = filters.sections[indexPath.section]
+        let section = FilterModel.sections[indexPath.section]
         cell.label = section.items[indexPath.item]
         cell.isCellSelected = section.isSelected(index: indexPath.item)
         return cell
@@ -51,7 +47,7 @@ extension FilterControler {
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: reuseHeaderIdentifier, for: indexPath) as! FilterSectionHeaderView
-            let section = filters.sections[indexPath.section]
+            let section = FilterModel.sections[indexPath.section]
             headerView.sectionTitle.text = section.key
             return headerView
         default:
@@ -108,7 +104,7 @@ extension FilterControler {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let section = filters.sections[indexPath.section]
+        let section = FilterModel.sections[indexPath.section]
         
         if section.inputType == .Radio {
             toggleRadioView(collectionView, section: section, indexPath: indexPath)

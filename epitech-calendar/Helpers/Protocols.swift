@@ -8,9 +8,11 @@
 
 import UIKit
 
-protocol UICollectionViewProtocol {
+@objc protocol ScrollerDelegateProtocol {
     func numberOfSections(in collectionView: UICollectionView) -> Int
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    func scrollViewDidScroll(_ scrollView: UIScrollView)
+    @objc optional func scrollViewDidScroll(_ scrollView: UIScrollView)
+    @objc optional func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
+    @objc optional func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
 }

@@ -29,7 +29,7 @@ extension InternalEpitechAPI {
 
 // MARK - Helpers methods
 extension InternalEpitechAPI {
-    func getActivityUrl(start: Date, end: Date) -> String {
+    private func getActivityUrl(start: Date, end: Date) -> String {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd"
 
@@ -42,19 +42,62 @@ extension InternalEpitechAPI {
 
         return "\(activityUrl)?\(queryParams)"
     }
+    
+    private func findFreeRowIndex(rowActivities: [[Activity]], activity: Activity) -> Int? {
+        for (i, row) in rowActivities.enumerated() {
+            if row.isEmpty || !Activity.intersects(activity1: row.last!, activity2: activity) {
+                return i
+            }
+        }
+        return nil
+    }
+    
+    private func dispatchActivitiesIntoRows(activities: [Activity]) -> [Activity] {
+        var dispatchedActivities = [Activity]()
+        var rowActivities = [[Activity]]()
+
+        for var activity in activities {
+            if let rowIndex = findFreeRowIndex(rowActivities: rowActivities, activity: activity) {
+                rowActivities[rowIndex].append(activity)
+                activity.row = rowIndex
+            } else {
+                rowActivities.append([activity])
+                activity.row = rowActivities.count - 1
+            }
+            dispatchedActivities.append(activity)
+        }
+
+        return dispatchedActivities
+    }
+    
+    private func sortActivities(activities: [Activity]) -> [Activity] {
+        guard !activities.isEmpty else { return [Activity]() }
+
+        let selectedSemesters = FilterModel.semesterSection.getSelectedItems()
+        let filteredActivities = activities.filter({ selectedSemesters.contains($0.semester) })
+        let sortedActivities = filteredActivities.sorted(by: { $0.start < $1.start })
+        let dispatchedActivities = dispatchActivitiesIntoRows(activities: sortedActivities)
+
+        return dispatchedActivities
+    }
 }
 
 // MARK - Public methods
 extension InternalEpitechAPI {
-    func fetchActivities(start: Date, end: Date, completion: @escaping (_ activities: [Activity]?) -> ()) {
+    func fetchActivities(start: Date, end: Date, onSucceed: @escaping (_ activities: [Activity]) -> (), onFailed: @escaping (_ error: Any) -> ()) {
         func fetchSuccess(data: Data) {
             let activities = getActivitiesFromData(data: data)
-            completion(activities)
+            if let activities = activities {
+                let sortedActivities = sortActivities(activities: activities)
+                onSucceed(sortedActivities)
+            } else {
+                onFailed("")
+            }
         }
 
         func fetchFail(error: Any) {
             print(error)
-            completion(nil)
+            onFailed(error)
         }
 
         let url = getActivityUrl(start: start, end: end)

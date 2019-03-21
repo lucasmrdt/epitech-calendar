@@ -97,9 +97,13 @@ struct SemesterSection: FilterSection {
 }
 
 struct FilterModel {
-    var sections: [FilterSection] = [
-        ActivitySection() as FilterSection,
-        CourseSection() as FilterSection,
-        SemesterSection() as FilterSection,
+    static var activitySection: FilterSection = ActivitySection()
+    static var courseSection: FilterSection = CourseSection()
+    static var semesterSection: FilterSection = SemesterSection()
+
+    static var sections: [FilterSection] = [
+        FilterModel.activitySection,
+        FilterModel.courseSection,
+        FilterModel.semesterSection,
     ]
 }
