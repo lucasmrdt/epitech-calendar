@@ -8,8 +8,12 @@
 
 import UIKit
 
-struct Constants {
+struct IdentifierConstants {
     static let persistentContainerName = "epitech-calendar"
+
+    static let activityRestorationID = "activity-restoration-id"
+    static let timelineRestorationID = "timeline-restoration-id"
+    static let monthRestorationID = "month-restoration-id"
 }
 
 struct Fonts {
@@ -34,10 +38,11 @@ struct ActivityConstants {
     static let numberHoursToDisplay: Double = ActivityConstants.numberDaysToDisplay * ActivityConstants.numberHoursByDays
     
     // MARK - Size
-    static let unitWidth: Double = 70
-    static let hourWidth: Double = ActivityConstants.unitWidth * 2
+    static let halfHourWidth: Double = 70
+    static let hourWidth: Double = ActivityConstants.halfHourWidth * 2
+    static let dayWidth: Double = ActivityConstants.hourWidth * ActivityConstants.numberHoursByDays
+    static let weekWidth: Double = ActivityConstants.dayWidth * ActivityConstants.numberDaysToDisplay
     static let activityHeight: Double = 40
     static let horizontalMargin: Double = 5
-    static let contentHeight: Double = 300
-    static let contentWidth: Double = ActivityConstants.numberHoursToDisplay * ActivityConstants.hourWidth
+    static let verticalMargin: Double = 24
 }

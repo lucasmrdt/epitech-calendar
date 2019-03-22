@@ -20,14 +20,29 @@ struct Storage {
     static func save() {
         guard let context = Storage.context else { return }
         do {
-            try (context.save())
-        } catch { return }
+            try context.save()
+        } catch {
+            print("aie")
+            return
+        }
     }
 
     static func createEntity(entityName: EntityName) -> NSEntityDescription? {
         guard let context = Storage.context else { return nil }
         return NSEntityDescription.entity(forEntityName: entityName.rawValue, in: context)
     }
+    
+    static func removeItems(entityName: EntityName) {
+        guard let context = Storage.context else { return }
+        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: entityName.rawValue)
+        let request = NSBatchDeleteRequest(fetchRequest: fetch)
+        do {
+            try context.execute(request)
+        } catch let error {
+            print(error)
+        }
+    }
+
     
     static func loadItems<T>(entityName: EntityName) -> [T]? {
         guard let context = Storage.context else { return nil }
@@ -43,7 +58,7 @@ struct Storage {
     
     static func loadItem<T>(entityName: EntityName) -> T? {
         guard let data: [T] = Storage.loadItems(entityName: entityName) else { return nil }
-        guard data.count > 0 else { return nil }
+        guard data.count == 1 else { return nil }
         return data.first
     }
 }

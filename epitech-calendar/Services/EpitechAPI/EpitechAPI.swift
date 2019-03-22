@@ -37,8 +37,8 @@ class InternalEpitechAPI {
     
     init() {
         guard let loadedUser: User = Storage.loadItem(entityName: .User) else { return }
-        user = loadedUser
-        authToken = loadedUser.authToken
+        self.user = loadedUser
+        self.authToken = loadedUser.authToken
     }
 }
 
@@ -49,9 +49,9 @@ extension InternalEpitechAPI {
             onFail("Invalid url: \(rawUrl)")
             return
         }
-
+        
         var request = URLRequest(url: url)
-        request.setValue(cookie, forHTTPHeaderField: "Cookie")
+        request.setValue(self.cookie, forHTTPHeaderField: "Cookie")
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if data != nil && error == nil {
                 onSucceed(data!)
@@ -59,7 +59,7 @@ extension InternalEpitechAPI {
                 onFail(error as Any)
             }
         }
-
+        
         task.resume()
     }
 }

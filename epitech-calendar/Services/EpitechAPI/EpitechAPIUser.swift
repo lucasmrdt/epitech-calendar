@@ -26,6 +26,7 @@ extension InternalEpitechAPI {
 extension InternalEpitechAPI {
     func fetchUserInformation(completion: @escaping (_ user: User?) -> ()) {
         func fetchSuccess(data: Data) {
+            Storage.removeItems(entityName: .User)
             let user = getUserFromData(data: data)
             self.user = user
             completion(user)

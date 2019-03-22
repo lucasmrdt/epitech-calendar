@@ -101,6 +101,6 @@ extension InternalEpitechAPI {
         }
 
         let url = getActivityUrl(start: start, end: end)
-        fetch(url: url, onSucceed: fetchSuccess, onFail: fetchFail)
+        self.fetch(url: url, onSucceed: fetchSuccess, onFail: fetchFail)
     }
 }

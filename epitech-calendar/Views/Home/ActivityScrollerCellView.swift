@@ -10,4 +10,9 @@ import UIKit
 
 class ActivityScrollerCellView : UICollectionViewCell {
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var view: UIView! {
+        didSet {
+            view.layer.cornerRadius = 7
+        }
+    }
 }

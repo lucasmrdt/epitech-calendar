@@ -23,7 +23,6 @@ class TimelineScrollerDelegate {
         self.timelineCollectionView = timelineCollectionView
         self.activityCollectionView = activityCollectionView
         self.setupTimelines()
-        print(timelines)
     }
 }
 
@@ -63,10 +62,20 @@ extension TimelineScrollerDelegate : ScrollerDelegateProtocol {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        activityCollectionView.reloadData()
+        let offsetX = scrollView.contentOffset.x
+        let width = scrollView.frame.size.width
+        let contentWidth = scrollView.contentSize.width
+        
+        activityCollectionView.contentOffset.x = scrollView.contentOffset.x
+
+        if offsetX > contentWidth - width {
+            setupTimelines()
+            timelineCollectionView.reloadData()
+        }
+
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: ActivityConstants.unitWidth, height: Double(itemHeight))
+        return CGSize(width: ActivityConstants.halfHourWidth, height: Double(itemHeight))
     }
 }

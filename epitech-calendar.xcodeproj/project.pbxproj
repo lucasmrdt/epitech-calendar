@@ -33,6 +33,10 @@
 		AC9D7208224119F7006E42D9 /* ActivityScrollerLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D7207224119F7006E42D9 /* ActivityScrollerLayout.swift */; };
 		AC9D720A22423985006E42D9 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D720922423985006E42D9 /* Enumerations.swift */; };
 		AC9D720C22428660006E42D9 /* TimelineModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D720B22428660006E42D9 /* TimelineModel.swift */; };
+		AC9D7212224396A8006E42D9 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC9D7211224396A8006E42D9 /* Roboto-Light.ttf */; };
+		AC9D721422439E6D006E42D9 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC9D721322439E6D006E42D9 /* Roboto-Regular.ttf */; };
+		AC9D72162244DACD006E42D9 /* ActivityScrollerLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9D72152244DACD006E42D9 /* ActivityScrollerLoadingView.swift */; };
+		AC9D72182244DE11006E42D9 /* Test.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC9D72172244DE11006E42D9 /* Test.xib */; };
 		ACB984852236536E009D6C40 /* FilterControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB984842236536E009D6C40 /* FilterControler.swift */; };
 		ACB9849222365905009D6C40 /* SourceSansPro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACB9848F223658B2009D6C40 /* SourceSansPro-Light.ttf */; };
 		ACB9849322365908009D6C40 /* SourceSansPro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ACB98490223658B3009D6C40 /* SourceSansPro-Regular.ttf */; };
@@ -103,15 +107,12 @@
 		AC9D7207224119F7006E42D9 /* ActivityScrollerLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScrollerLayout.swift; sourceTree = "<group>"; };
 		AC9D720922423985006E42D9 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
 		AC9D720B22428660006E42D9 /* TimelineModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineModel.swift; sourceTree = "<group>"; };
+		AC9D7211224396A8006E42D9 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Roboto-Light.ttf"; path = "../../../../../../Downloads/Roboto/Roboto-Light.ttf"; sourceTree = "<group>"; };
+		AC9D721322439E6D006E42D9 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		AC9D72152244DACD006E42D9 /* ActivityScrollerLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityScrollerLoadingView.swift; sourceTree = "<group>"; };
+		AC9D72172244DE11006E42D9 /* Test.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Test.xib; sourceTree = "<group>"; };
 		ACB984842236536E009D6C40 /* FilterControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterControler.swift; sourceTree = "<group>"; };
 		ACB98486223658B2009D6C40 /* SourceSansPro-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLight.ttf"; sourceTree = "<group>"; };
-		ACB98487223658B2009D6C40 /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
-		ACB98488223658B2009D6C40 /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
-		ACB98489223658B2009D6C40 /* SourceSansPro-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.ttf"; sourceTree = "<group>"; };
-		ACB9848A223658B2009D6C40 /* SourceSansPro-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-LightItalic.ttf"; sourceTree = "<group>"; };
-		ACB9848B223658B2009D6C40 /* SourceSansPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.ttf"; sourceTree = "<group>"; };
-		ACB9848C223658B2009D6C40 /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
-		ACB9848D223658B2009D6C40 /* SourceSansPro-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BoldItalic.ttf"; sourceTree = "<group>"; };
 		ACB9848E223658B2009D6C40 /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
 		ACB9848F223658B2009D6C40 /* SourceSansPro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Light.ttf"; sourceTree = "<group>"; };
 		ACB98490223658B3009D6C40 /* SourceSansPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.ttf"; sourceTree = "<group>"; };
@@ -258,7 +259,9 @@
 				AC3076B0223AB29700747839 /* MonthScrollerHeaderView.swift */,
 				ACB9849822368FF6009D6C40 /* NavigationBarLeftButton.swift */,
 				AC3076B5223BD68D00747839 /* ActivityScrollerCellView.swift */,
+				AC9D72152244DACD006E42D9 /* ActivityScrollerLoadingView.swift */,
 				AC3076B7223BD6AC00747839 /* TimelineScrollerCellView.swift */,
+				AC9D72172244DE11006E42D9 /* Test.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -332,18 +335,13 @@
 		ACB98472223593BA009D6C40 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				ACB98489223658B2009D6C40 /* SourceSansPro-Black.ttf */,
-				ACB9848C223658B2009D6C40 /* SourceSansPro-BlackItalic.ttf */,
-				ACB9848B223658B2009D6C40 /* SourceSansPro-Bold.ttf */,
-				ACB9848D223658B2009D6C40 /* SourceSansPro-BoldItalic.ttf */,
+				AC9D721322439E6D006E42D9 /* Roboto-Regular.ttf */,
+				AC9D7211224396A8006E42D9 /* Roboto-Light.ttf */,
 				ACB98486223658B2009D6C40 /* SourceSansPro-ExtraLight.ttf */,
-				ACB98488223658B2009D6C40 /* SourceSansPro-ExtraLightItalic.ttf */,
 				ACB9848E223658B2009D6C40 /* SourceSansPro-Italic.ttf */,
 				ACB9848F223658B2009D6C40 /* SourceSansPro-Light.ttf */,
-				ACB9848A223658B2009D6C40 /* SourceSansPro-LightItalic.ttf */,
 				ACB98490223658B3009D6C40 /* SourceSansPro-Regular.ttf */,
 				ACB98491223658B3009D6C40 /* SourceSansPro-SemiBold.ttf */,
-				ACB98487223658B2009D6C40 /* SourceSansPro-SemiBoldItalic.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -475,9 +473,12 @@
 			files = (
 				AC25E22722297C0C00E824BC /* LaunchScreen.storyboard in Resources */,
 				AC25E22422297C0C00E824BC /* Assets.xcassets in Resources */,
+				AC9D721422439E6D006E42D9 /* Roboto-Regular.ttf in Resources */,
 				AC25E22222297C0900E824BC /* Authentication.storyboard in Resources */,
+				AC9D72182244DE11006E42D9 /* Test.xib in Resources */,
 				ACB9849222365905009D6C40 /* SourceSansPro-Light.ttf in Resources */,
 				AC4FA924223572960026A44C /* App.storyboard in Resources */,
+				AC9D7212224396A8006E42D9 /* Roboto-Light.ttf in Resources */,
 				ACB9849322365908009D6C40 /* SourceSansPro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +561,7 @@
 				ACB984A52236E410009D6C40 /* FilterCellView.swift in Sources */,
 				ACB984852236536E009D6C40 /* FilterControler.swift in Sources */,
 				AC9D720A22423985006E42D9 /* Enumerations.swift in Sources */,
+				AC9D72162244DACD006E42D9 /* ActivityScrollerLoadingView.swift in Sources */,
 				ACB9849922368FF6009D6C40 /* NavigationBarLeftButton.swift in Sources */,
 				ACB984BA22380FB0009D6C40 /* EpitechModuleModel.swift in Sources */,
 				AC40E53F223171E500CCFE97 /* SegueHandler.swift in Sources */,

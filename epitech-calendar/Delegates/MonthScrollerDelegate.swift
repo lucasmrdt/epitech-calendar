@@ -12,10 +12,11 @@ class MonthScrollerDelegate {
     // MARK - Constants
     private let reuseCellIdentifier = "MonthCell"
     private let reuseHeaderIdentifier = "MonthHeader"
-    private let cellDateFormat = "dd/MM/yyyy"
+    private let cellLabelFormat = "EEE"
+    private let cellNumberFormat = "dd"
     private let headerDateFormat = "MMMM"
-    private let cellWidth = 100
-    private let cellHeight = 50
+    private let cellWidth = 40
+    private let cellHeight = 40
     private let cellPadding = 10
     private let maxMonthFetched = 12
     private let currentDate = Date()
@@ -23,35 +24,15 @@ class MonthScrollerDelegate {
     // MARK - Variables
     var monthCollectionView: UICollectionView!
 
-    private var scrollViewWidth: CGFloat = 0
     private var daysByMonths = [[Date]]()
-    private var year: Int
-    private var month: Int {
-        didSet {
-            if month >= 12 {
-                month = 0
-                year += 1
-            } else if month < 0 {
-                month = 11
-                year -= 1
-            }
-        }
-    }
 
     init(monthCollectionView: UICollectionView) {
-        let date = Date()
-        let calendar = Calendar.current
-
         self.monthCollectionView = monthCollectionView
 
         let layout = monthCollectionView.collectionViewLayout as? UICollectionViewFlowLayout
         layout?.sectionHeadersPinToVisibleBounds = true
-        year = calendar.component(.year, from: date)
-        month = calendar.component(.month, from: date)
-        let currentMonth = Date.generateDays(forYear: year, forMonth: month)
-        let monthWidth = getWidthOfMonth(month: currentMonth)
-        scrollViewWidth += monthWidth
-        daysByMonths.append(currentMonth)
+        
+        setupMonth()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -59,36 +40,38 @@ class MonthScrollerDelegate {
     }
 }
 
-// MARK - Helpers
+// MARK - Public Functions
+extension MonthScrollerDelegate {
+    func selectItem(byDate date: Date) {
+        guard   let firstMonth = daysByMonths.first?.first,
+                let lastMonth = daysByMonths.last?.last
+        else { return }
+        
+        guard date >= firstMonth && date <= lastMonth else { return }
+
+        guard let selectedMonthIndex = daysByMonths.firstIndex(where: { date.isSameMonth(date: $0[0]) }) else { return }
+        let selectedMonth = daysByMonths[selectedMonthIndex]
+        guard let selectedDayIndex = selectedMonth.firstIndex(where: { date.isSameDay(date: $0) }) else { return }
+
+        let indexPath = IndexPath(row: selectedDayIndex, section: selectedMonthIndex)
+        
+        DispatchQueue.main.async {
+            self.monthCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
+        }
+    }
+}
+
+// MARK - Private Functions
 extension MonthScrollerDelegate {
     private func getWidthOfMonth(month: [Date]) -> CGFloat {
         return CGFloat(month.count * cellWidth + (month.count - 1) * cellPadding)
     }
     
-    private func fetchNextMonth() -> Bool {
-        guard let maxDate = daysByMonths.last?.last else { return false }
-        guard Date.monthsBetweenDates(startDate: currentDate, endDate: maxDate) < maxMonthFetched else { return false }
-
-        month += 1
-        let newMonth = Date.generateDays(forYear: year, forMonth: month)
-        let contentSize = getWidthOfMonth(month: newMonth)
-        scrollViewWidth += contentSize
-        daysByMonths.append(newMonth)
-        monthCollectionView.reloadData()
-        return true
-    }
-    
-    private func fetchPreviousMonth() -> Bool {
-        let minDate = daysByMonths[0][0]
-        guard Date.monthsBetweenDates(startDate: minDate, endDate: currentDate) < maxMonthFetched else { return false }
-
-        month -= 1
-        let previousMonth = Date.generateDays(forYear: year, forMonth: month)
-        let contentSize = getWidthOfMonth(month: previousMonth)
-        scrollViewWidth += contentSize
-        daysByMonths.insert(previousMonth, at: 0)
-        monthCollectionView.reloadData()
-        return true
+    private func setupMonth() {
+        let currentDate = Date()
+        let startDate = Calendar.current.date(byAdding: .year, value: -1, to: currentDate)!
+        let endDate = Calendar.current.date(byAdding: .year, value: 1, to: currentDate)!
+        daysByMonths = Date.generateMonths(startDate: startDate, endDate: endDate)
     }
 }
 
@@ -106,8 +89,12 @@ extension MonthScrollerDelegate : ScrollerDelegateProtocol {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseCellIdentifier, for: indexPath) as! MonthScrollerCellView
         let date = daysByMonths[indexPath.section][indexPath.row]
         let dateFormatGetter = DateFormatter()
-        dateFormatGetter.dateFormat = cellDateFormat
-        cell.label.text = dateFormatGetter.string(from: date)
+        dateFormatGetter.dateFormat = cellLabelFormat
+        let dateLabel = dateFormatGetter.string(from: date)
+        dateFormatGetter.dateFormat = cellNumberFormat
+        let dateNumber = dateFormatGetter.string(from: date)
+        cell.dayLabel.text = dateLabel
+        cell.dayNumber.text = dateNumber
         return cell
     }
     
@@ -126,20 +113,11 @@ extension MonthScrollerDelegate : ScrollerDelegateProtocol {
         }
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetX = scrollView.contentOffset.x
-        let width = scrollView.frame.size.width
-
-        if offsetX > scrollViewWidth - width {
-            guard fetchNextMonth() else { return }
-        } else if offsetX <= 0 {
-            guard fetchPreviousMonth() else { return }
-            let firstMonthWidth = getWidthOfMonth(month: daysByMonths[0])
-            scrollView.contentOffset.x = firstMonthWidth
-        }
-    }
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: cellWidth, height: cellHeight)
+    }
+    
+    func viewDidAppear(_ animated: Bool) {
+        selectItem(byDate: Date())
     }
 }

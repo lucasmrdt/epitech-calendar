@@ -29,6 +29,14 @@ extension WKWebView {
     }
 }
 
+extension UICollectionView {
+    var isScrolling: Bool {
+        get {
+            return self.isDragging || self.isDecelerating
+        }
+    }
+}
+
 extension UIViewController {
     var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -53,6 +61,26 @@ extension Date {
         guard let sunday = gregorian.date(from: gregorian.dateComponents([.yearForWeekOfYear, .weekOfYear], from: self)) else { return nil }
         return gregorian.date(byAdding: .day, value: 7, to: sunday)
     }
+    
+    var day: Int {
+        return Calendar.current.component(.day, from: self)
+    }
+    
+    var month: Int {
+        return Calendar.current.component(.month, from: self)
+    }
+    
+    var year: Int {
+        return Calendar.current.component(.year, from: self)
+    }
+    
+    func isSameDay(date: Date) -> Bool {
+        return date.day == self.day && isSameMonth(date: date)
+    }
+    
+    func isSameMonth(date: Date) -> Bool {
+        return date.month == self.month && date.year == self.year
+    }
 
     static func getDate(day: Int, month: Int, year: Int) -> Date {
         let dateComponents = DateComponents(year: year, month: month, day: day)
@@ -61,14 +89,23 @@ extension Date {
         return date
     }
     
-    static func generateDays(forYear year: Int, forMonth month: Int) -> [Date] {
-        let dateComponents = DateComponents(year: year, month: month)
-        let calendar = Calendar.current
-        let date = calendar.date(from: dateComponents)!
-        
-        let range = calendar.range(of: .day, in: .month, for: date)!
-        let dateRange = range.map { self.getDate(day: $0, month: month, year: year) }
+    static func generateDays(fromMonth date: Date) -> [Date] {
+        let range = Calendar.current.range(of: .day, in: .month, for: date)!
+        let dateRange = range.map { self.getDate(day: $0, month: date.month, year: date.year) }
         return dateRange
+    }
+    
+    static func generateMonths(startDate from: Date, endDate to: Date) -> [[Date]] {
+        let difference = Date.monthsBetweenDates(startDate: from, endDate: to)
+        var generatedDays = [[Date]]()
+
+        for i in 0..<difference {
+            let date = Calendar.current.date(byAdding: .month, value: i, to: from)!
+            let daysOfMonth = Date.generateDays(fromMonth: date)
+            generatedDays.append(daysOfMonth)
+        }
+
+        return generatedDays
     }
     
     static func monthsBetweenDates(startDate: Date, endDate: Date) -> Int {

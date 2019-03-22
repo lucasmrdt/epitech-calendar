@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 class AuthenticationControler : UIViewController, SegueHandler {
     
@@ -18,6 +19,7 @@ class AuthenticationControler : UIViewController, SegueHandler {
     }
     @IBAction func authLoginFailed(_ sender: UIStoryboardSegue) {
         EpitechAPI.Api.authToken = nil
+        clearCookie()
     }
     
     override func viewDidLoad() {
@@ -34,5 +36,9 @@ class AuthenticationControler : UIViewController, SegueHandler {
         if EpitechAPI.Api.hasToken {
             redirectToLoginScreen()
         }
+    }
+    
+    private func clearCookie() {
+        HTTPCookieStorage.shared.removeCookies(since: Date.distantPast)
     }
 }

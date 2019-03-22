@@ -14,19 +14,27 @@ class HomeControler : UIViewController {
     var activityScrollerDelegate: ActivityScrollerDelegate!
     var timelineScrollerDelegate: TimelineScrollerDelegate!
     
+    private var beginScrollingOffset: CGPoint?
+    
     @IBOutlet weak var monthCollectionView: UICollectionView!
     @IBOutlet weak var activityCollectionView: UICollectionView!
     @IBOutlet weak var timelineCollectionView: UICollectionView!
 
     @IBAction func filterCancel(_ sender: UIStoryboardSegue) {
+        activityScrollerDelegate.refreshActivities()
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.monthScrollerDelegate = MonthScrollerDelegate(monthCollectionView: monthCollectionView)
-        self.activityScrollerDelegate = ActivityScrollerDelegate(timelineCollectionView: timelineCollectionView, activityCollectionView: activityCollectionView)
+        self.activityScrollerDelegate = ActivityScrollerDelegate(monthScrollerDelegate: monthScrollerDelegate, timelineCollectionView: timelineCollectionView, activityCollectionView: activityCollectionView)
         self.timelineScrollerDelegate = TimelineScrollerDelegate(timelineCollectionView: timelineCollectionView, activityCollectionView: activityCollectionView)
         setupNavigationBar()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        monthScrollerDelegate.viewDidAppear(animated)
     }
 }
 
@@ -71,6 +79,8 @@ extension HomeControler : UICollectionViewDataSource {
         switch collectionView {
         case monthCollectionView:
             return monthScrollerDelegate.collectionView(collectionView ,viewForSupplementaryElementOfKind: kind, at: indexPath)
+//        case activityCollectionView:
+//            return activityScrollerDelegate.collectionView(collectionView, viewForSupplementaryElementOfKind: kind, at: indexPath)
         default:
             fatalError("Unknown collectionView \(collectionView)")
         }
@@ -92,15 +102,18 @@ extension HomeControler : UICollectionViewDataSource {
 
 // MARK - UICollectionViewDelegate
 extension HomeControler : UICollectionViewDelegate {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        beginScrollingOffset = scrollView.contentOffset
+    }
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if activityCollectionView.isDragging {
+        switch scrollView.restorationIdentifier {
+        case IdentifierConstants.activityRestorationID,
+             IdentifierConstants.timelineRestorationID:
+            guard activityCollectionView.isScrolling || timelineCollectionView.isScrolling else { return }
             activityScrollerDelegate.scrollViewDidScroll(scrollView)
-        }
-        else if timelineCollectionView.isDragging {
             timelineScrollerDelegate.scrollViewDidScroll(scrollView)
-        }
-        else if monthCollectionView.isDragging {
-            monthScrollerDelegate.scrollViewDidScroll(scrollView)
+        default: break
         }
     }
 }

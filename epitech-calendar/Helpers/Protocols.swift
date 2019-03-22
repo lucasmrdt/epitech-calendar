@@ -15,4 +15,5 @@ import UIKit
     @objc optional func scrollViewDidScroll(_ scrollView: UIScrollView)
     @objc optional func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView
     @objc optional func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    @objc optional func viewDidAppear(_ animated: Bool)
 }

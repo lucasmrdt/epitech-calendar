@@ -10,6 +10,7 @@ import Foundation
 
 enum State {
     case Loading
+    case LoadingMore
     case Succeed
     case Failed
     case Default
